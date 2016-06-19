@@ -1,0 +1,117 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.pocetak-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 130px;
+}
+
+.oHotelu-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #C8DEE6;
+    padding-bottom: 130px;
+}
+
+.rezervacije-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 130px;
+}
+
+.kontakt-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #C8DEE6;
+    padding-bottom: 130px;
+}
+
+.registracija-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 130px;
+}
+
+.login-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #C8DEE6;
+    padding-bottom: 130px;
+}
+
+.sobe-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 130px;
+}
+
+.navbar-default {
+    background-color: #C8DEE6;
+    border-color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #00000;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #465B73;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #465B73;
+    background-color: #F5F5F5;
+}
+
+#logoImage {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#table {
+    width: 100%;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}

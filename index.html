@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dusan Nesic 2325</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="myApp">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="mainController">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">{{title}}</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" ng-repeat="link in links">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{link.path}}">{{link.link}}</a>
+                    </li>
+                    <li>
+                        <p id="loggedUser"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="pocetak" class="pocetak-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Dobrodošli u MetHotels</h1>
+                    <img id="logoImage" class="img-responsive" src="res/logo.jpg">
+                    <p>Posetite najlepši hotel u regionu</p>
+                    <p>Rezervišite smeštaj ukoliko danas!</p>
+                    <br>
+                    <a class="btn btn-default page-scroll" href="#rezervacije">Rezerviši smeštaj odmah!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oHotelu" class="oHotelu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>O hotelu</h1>
+                    <h4>MetHotels je dobro poznati hotel sa 5 zvezdica</h4>
+                    <img class="img-responsive" src="res/hotel.jpg">
+                    <p><em>Slika 1: Prikaz hotela</em></p>
+                    <p>U srcu grada, na glavnom šetalištu, nalazi se reprezentativni hotel MetHotels koji predstavlja idealno mesto okupljanja poslovnog i turističkog sveta. MetHotels je okružen mnogim znamenitim mestima i objektima. Na daleko poznata tvrđava, nalazi se na samo par minura hoda od MetHotels-a. U neposrednoj blizini su i Narodno pozorište, Simfonijski orkestar kao i Saborna crkva. Uređen kej reke i najstariji gradski park izvanredno su mesto za opuštanje i relaksaciju, a glavna šetačka zona omogućuje gostu da uživa u bašti hotela. Veliki broj brend butika u pešačkoj zoni su idealno mesto za šoping.<p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rezervacije" class="rezervacije-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Rezervacije</h1>
+                    <h4>Rezervišite smeštaj u hotelu već danas</h4>
+                    <table id="table">
+                      <tr>
+                        <th>Vrsta sobe</th>
+                        <th>Period</th> 
+                        <th>Cena</th>
+                      </tr>
+                      <tr>
+                        <td>Jednokrevetna soba</td>
+                        <td>01.10. - 31.05.</td> 
+                        <td>1200</td>
+                      </tr>
+                      <tr>
+                        <td>Jednokrevetna soba</td>
+                        <td>01.6. - 31.9.</td> 
+                        <td>1400</td>
+                      </tr>
+                      <tr>
+                        <td>Dvokrevetna soba</td>
+                        <td>01.10. - 31.05.</td> 
+                        <td>1550</td>
+                      </tr>
+                      <tr>
+                        <td>Dvokrevetna soba</td>
+                        <td>01.6. - 31.9.</td> 
+                        <td>1700</td>
+                      </tr>
+                      <tr>
+                        <td>Trokrevetna soba</td>
+                        <td>01.10. - 31.05.</td> 
+                        <td>2100</td>
+                      </tr>
+                      <tr>
+                        <td>Trokrevetna soba</td>
+                        <td>01.6. - 31.9.</td> 
+                        <td>2550</td>
+                      </tr>
+                    </table>
+                        
+                    </table>
+                    <div class="form-group">
+                        <label for="ime">Ime:</label>
+                        <input type="text" class="form-control" id="ime"></input>
+                        <label for="prezime">Prezime:</label>
+                        <input type="text" class="form-control" id="prezime"></input>
+                        <label for="brojTelefona">Broj telefona:</label>
+                        <input type="text" class="form-control" id="brojTelefona"></input>
+                        <label for="brojLicneKarte">Broj lične karte:</label>
+                        <input type="text" class="form-control" id="brojLicneKarte"></input>
+                        <label for="slobodneSobe">Odaberite slobodnu sobu:</label>
+                        <select class="form-control" id="slobodneSobe">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <button class="form-control">Potvrdi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="kontakt-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Kontakt</h1>
+                    <h4>Kontaktirajte nas, pitajte nas</h4>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="text" class="form-control" id="email"></input>
+                        <label for="naslov">Naslov poruke:</label>
+                        <input type="text" class="form-control" id="naslov"></input>
+                        <label for="pitanje">Sadržaj:</label>
+                        <textarea type="text" class="form-control" id="pitanje" rows="5"></textarea>
+                        <br>
+                        <button class="form-control">Pošalji</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registracija" class="registracija-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Registracija</h1>
+                    <h4>Obezbedite sebi pristup i mnogobrojne popuste</h4>
+                    <form class="form-group" action="php/funkcije.php" method="POST">
+                        <label for="regIme">Unesite Vaše ime:</label>
+                        <input type="text" class="form-control" id="regIme" name="ime"></input>
+                        <label for="regPrezime">Unesite Vaše prezime:</label>
+                        <input type="text" class="form-control" id="regPrezime" name="prezime"></input>
+                        <label for="regUsername">Unesite korisničko ime:</label>
+                        <input type="text" class="form-control" id="regUsername" name="username"></input>
+                        <label for="regEmail">Unesite Vaš e-mail:</label>
+                        <input type="text" class="form-control" id="regEmail" name="email"></input>
+                        <label for="regPassword">Unesite šifru:</label>
+                        <input type="password" class="form-control" id="regPassword" name="password"></input>
+                        <br>
+                        <input type="submit" class="form-control" name="submit" value="Regisruj se!"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" class="login-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Login</h1>
+                    <h4>Unesite svoje podatke kako biste se prijavili</h4>
+                    <form class="form-group" action="php/login.php" method="POST">
+                        <label for="logUsername">Unesite Vaš username:</label>
+                        <input type="text" class="form-control" id="logUsername" name="logUsername"></input>
+                        <label for="logUsername">Unesite Vašu šifru:</label>
+                        <input type="password" class="form-control" id="logPassword" name="logPassword"></input>
+                        <br>
+                        <input type="submit" name="submit" value="Ulogujte se!" class="form-control"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobe" class="sobe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <h1>Dodavanje soba</h1>
+                <h4>Unesite podatke o sobi kako biste je dodali</h4>
+                    <form class="form-group" action="php/sobe.php" method="POST">
+                        <label for="brojSobe">Unesite broj sobe:</label>
+                        <input type="text" class="form-control" id="brojSobe" name="brojSobe"></input>
+                        <label for="brojKreveta">Unesite broj kreveta:</label>
+                        <input type="text" class="form-control" id="brojKreveta" name="brojKreveta"></input>
+                        <input type="text" class="form-control hidden" id="rezervisano" name="rezervisano" value="0"></input>
+                        <br>
+                        <input type="submit" name="submit" value="Ulogujte se!" class="form-control"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+
+</body>
+
+</html>
